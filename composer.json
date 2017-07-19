@@ -1,0 +1,41 @@
+{
+    "name": "orumad/laravel-yourls",
+    "description": "Use your own url shortener (YOURLS.org) to shorten urls from Laravel",
+    "type": "library",
+    "keywords": [
+        "orumad",
+        "laravel-yourls"
+    ],
+    "homepage": "https://github.com/orumad/laravel-yourls",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Muñoz",
+            "email": "dev@danielmunoz.io"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/contracts": "~5.4.0",
+        "illuminate/support": "~5.4.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Orumad\\Yourls\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Orumad\\Yourls\\YourlsServiceProvider"
+            ],
+            "aliases": {
+                "Yourls": "Orumad\\Yourls\\YourlsFacade"
+            }
+        }
+    }
+}
